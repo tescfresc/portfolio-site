@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mike Holbrook | Game Dev | Web Dev | 2D + 3D Design</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <canvas id="canvas"></canvas>
+  <div id="content">
+
+    <!--Mobile navigation menu-->
+    <div id=nav-mobile-menu>
+      <div>WORK</div>
+      <div>EXPERIMENTS</div>
+      <div>BLOG</div>
+      <div onclick="location.href='/contact.html';">CONTACT</div>
+    </div>
+
+    <div id="title-container">
+      <h1 id="typewriter"></h1>
+      <h2 id="subtitle">
+        GAME DEV</br>
+        WEB DEV</br>
+        2D + 3D DESIGN
+      </h2>
+    </div>
+
+    <div id="nav-outer">
+      <div>WORK</div>
+      <div>EXPERIMENTS</div>
+      <div>BLOG</div>
+      <div onclick="location.href='/contact.html';">CONTACT</div>
+    </div>
+
+    <!--Responsive menu button for mobile-->
+    <div id="nav-mobile-btn" onclick="toggleMenu()">MENU</div>
+
+
+    <div id="carousel-container">
+      <div class="carousel-slide">
+        <img src="img/carousel/0.jpg" alt="">
+        <div class="slide-title">COOKIE LAUNCH</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="img/carousel/1.jpg" alt="">
+        <div class="slide-title">TEST 2</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="img/carousel/2.jpg" alt="">
+        <div class="slide-title">TEST 3</div>
+      </div>
+    </div>
+
+
+    <div id="about-container">
+      <div id=about-title>
+        ABOUT ME
+      </div>
+      <div id=about-content>
+        I’m Mike. I’m a freelance/hobbyist developer. My current main interests are in machine learning, specifically
+        neural networks. As well as developing games/applications, I also like to create mods for games I enjoy playing.
+        This is my personal portfolio site where you’ll find my most recent and complete work.
+        </br>I have experience using C#, mainly within Unity. Web dev experience backend using Node.js and MongoDB.
+        Front end experience using p5.js, Pixi.js for interactive web design. HTML5 too.
+        </br>Creative exeperience using Blender, Cinema 4D, Photoshop, Illustrator, After Effects and Premiere Pro.
+        </br>I’d like to learn to create shaders and get better at 3D modelling.
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="footer-container">
+    <div id="social-icons">
+      <a href="https://twitter.com/orpimt" target="_blank"><img src="img/twitterlight.png" alt="Twitter"></a>
+      <a href=""><img src="img/gitlight.png" alt="Twitter"></a>
+    </div>
+    <div id="copyright-text">
+      © MIKE HOLBROOK 2021
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/background.js"></script>
+
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
