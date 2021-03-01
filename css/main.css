@@ -279,8 +279,10 @@ textarea {
 
     --dark1: #252525;
     --dark2: #333333;
+    --dark3: #494949;
     --light1: #c4c4c4;
     --light2: #afafaf;
+    --light3: #929292;
     --shadow: #0000002d;
 }
 
@@ -306,9 +308,9 @@ body {
   padding-bottom:5px;
   font-family: hoog;
   color: var(--light1);
-  height: clamp(40px, 17vw, 170px);
+  height: clamp(40px, 16vw, 190px);
   font-weight: initial;
-  font-size: clamp(20px, 10vw, 100px);
+  font-size: clamp(20px, 10vw, 120px);
   line-height: 80%;
   text-shadow:8px 8px var(--shadow);
 }
@@ -337,7 +339,7 @@ body {
 }
 
 #nav-outer {
-  margin: 10px auto;
+  margin: 10px auto 35px;
   width:92%;
   max-width: 1000px;
   height:clamp(50px, 12vw, 70px);
@@ -413,15 +415,14 @@ body {
 @media (max-width: 950px) {
   #nav-outer {
     display: none;
-
   }
-
   #nav-mobile-btn {
     display:block
-  }
+  } 
+}
 
-  
-  
+.nav-selected {
+  background-color: var(--dark3) !important;
 }
 
 #content {
@@ -434,7 +435,7 @@ body {
 #carousel-container {
   width: 100%;
   height: 40vw;
-  margin: 33px auto 15px;
+  margin: 7px auto 15px;
   opacity: 0;
   position: relative;
 
@@ -553,16 +554,17 @@ canvas {
 
 .page-content {
   margin: 0 4%;
+  padding-bottom: 20px;
 }
 
 .page-title {
   margin:0px;
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom:15px;
   font-family: hoog;
   color: var(--light1);
   font-weight: initial;
-  font-size: clamp(24px, 5vw, 50px);
+  font-size: clamp(30px, 5vw, 50px);
   line-height: 80%;
   text-shadow:8px 8px var(--shadow);
 }
@@ -574,17 +576,35 @@ canvas {
   padding-bottom: 20px;
 }
 
+@media (min-width:950px) {
+  .page-title {
+    margin-left:0;
+    text-align:center;
+    padding-top:10px;
+  }
+
+  .page-subtitle {
+    text-align: center;
+  }
+}
+
+/* Contact Page */
+
 #form-details-container {
   width: 100%;
+  max-width: 1100px;
   margin: auto;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .form-details {
   border: none;
   box-shadow:8px 8px var(--shadow);
   box-sizing: border-box;
-  margin: 6px auto;
+  /* margin: 6px auto; */
   margin-bottom: 20px;
   width: 100%;
   height: 50px;
@@ -600,7 +620,7 @@ canvas {
   border: none;
   box-shadow:8px 8px var(--shadow);
   box-sizing: border-box;
-  margin: 10px auto;
+  margin: 0px auto;
   width: 100%;
   max-width: 1100px;
   height: 30vh;
@@ -625,22 +645,120 @@ canvas {
 }
 
 @media (min-width: 950px) {
-  .page-title {
-    margin-left:0;
-    text-align:center;
-    padding-top:20px;
-  }
-
-  .page-subtitle {
-    text-align: center;
-  }
-
   .form-details {
-    width:47%;
-    max-width: 538px;
-    margin: 10px 10px;
-    
-    
+    width:49%;
   }
 }
+
+/* Work & Experiments */ 
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width:770px){
+  .card-container{
+    max-width: 1400px;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  flex-basis: 100%;
+  max-width: 650px;
+  /* padding-top: 70%; */
+  position: relative;
+  box-shadow:8px 8px var(--shadow);
+
+  margin-bottom: 5%;
+  
+  
+}
+
+.card::before {
+  padding-bottom: 70%;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-inside {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  width:100%;
+  height:75%;
+  object-fit: cover;
+}
+
+.card-title {
+  background-color: var(--dark2);
+  width: 100%;
+  height: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  color: var(--light1);
+  font-family: hoog;
+  font-size: clamp(22px, 10vw, 30px);
+}
+
+.card-title p {
+  width: 100%;
+  margin: 0px;
+  padding-left: 3vw;
+  line-height: 85%;
+}
+
+.card-title-p {
+  font-size: clamp(22px, 8vw, 50px);
+}
+.card-subtitle-p {
+  font-size: clamp(10px, 5vw, 25px);
+}
+
+@media (min-width:770px) {
+  .card {
+    flex-basis: 47%;
+  }
+
+  .card-title p {
+    padding-left: 2vw;
+  }
+
+  .card-title-p {
+    font-size: clamp(22px, 3.8vw, 50px);
+  }
+  .card-subtitle-p {
+    font-size: clamp(10px, 1.7vw, 20px);
+  }
+}
+
+@media (min-width:1100px) {
+  .card {
+    flex-basis: 31%;
+    margin-bottom: 3%;
+  }
+
+  .card-title p {
+    padding-left: 1vw;
+  }
+
+  .card-title-p {
+    font-size: clamp(22px, 2.6vw, 50px);
+  }
+  .card-subtitle-p {
+    font-size: clamp(10px, 1.5vw, 20px);
+  }
+}
+
+
+
 
