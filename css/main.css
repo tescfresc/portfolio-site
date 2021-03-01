@@ -326,7 +326,6 @@ body {
   font-size: clamp(10px, 4vw, 40px);
   line-height: 80%;
   text-shadow:5px 5px var(--shadow);
-  opacity: 0;
 }
 
 @media (max-width: 950px) {
@@ -345,7 +344,6 @@ body {
   height:clamp(50px, 12vw, 70px);
   display: table;
   border-spacing: 20px 0px;
-  opacity: 0;
   
 }
 
@@ -436,7 +434,6 @@ body {
   width: 100%;
   height: 40vw;
   margin: 7px auto 15px;
-  opacity: 0;
   position: relative;
 
 }
@@ -497,7 +494,6 @@ body {
 
 #about-container {
   text-align: center;
-  opacity: 0;
   
 }
 
