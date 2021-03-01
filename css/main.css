@@ -653,6 +653,7 @@ canvas {
 /* Work & Experiments */ 
 .card-container {
   width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
