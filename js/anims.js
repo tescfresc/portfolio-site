@@ -42,7 +42,6 @@ function type() {
 
 $(document).ready(function () {
     //only run on homepage
-    console.log(window.location.pathname);
     if(window.location.pathname == "/index.html" || window.location.pathname =="/" ) {
         setTimeout(type, 250);
     } else {
