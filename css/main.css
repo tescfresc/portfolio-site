@@ -455,6 +455,7 @@ body {
   height: 100%;
   position: relative;
   overflow:hidden;
+  cursor: pointer;
 }
 
 .carousel-slide:focus {
@@ -723,6 +724,7 @@ canvas {
   margin-bottom: 5%;
   overflow:hidden;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .card::before {
@@ -828,7 +830,7 @@ body.modal-open {
   width:92%;
 
   background: var(--dark1);
-  position: absolute;
+  position: fixed;
   margin:2% auto;
   left:0px;
   right: 0px;
