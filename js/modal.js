@@ -3,7 +3,12 @@ let modalBg = $('.modal-background');
 let body = $('body');
 
 function openModal(fileString) {
-    modalCont.load(`../projects/${fileString}.html`);
+    modalCont.load(`../projects/${fileString}.html`, () => {
+        //link close buttons once modal is loaded
+        $('.close-modal-btn').click(() => {
+            location.hash = "";
+        });
+    });
     modalBg.css('opacity', 1);
     modalCont.css('opacity', 0);
     modalBg.css('display', 'block');
@@ -16,6 +21,7 @@ function openModal(fileString) {
         easing:"easeInOutCubic",
         delay:anime.stagger(100)
     });
+    
 
 }
 
@@ -75,3 +81,5 @@ function hashChange () {
         location.hash = "";
     });
 }());
+
+//openModal("blankmodal");

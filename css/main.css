@@ -828,10 +828,11 @@ body.modal-open {
 
 .modal-popup-container {
   width:92%;
-
+  max-width: 1200px;
   background: var(--dark1);
   position: fixed;
-  margin:2% auto;
+  margin:2% auto 100px;
+  padding:20px 0px;
   left:0px;
   right: 0px;
   top: 0px;
