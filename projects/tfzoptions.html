@@ -1,9 +1,79 @@
-<div>
-  tfzoptions<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>test
+<link rel="stylesheet" href="./css/modal.css">
+<link rel="stylesheet" href="./lightbox/css/lightbox.css">
+<div class="modal-content">
+    <!-- CHANGE CONTENT FROM HERE-->
+    <div class="modal-title">
+        TF'S ZOMBIE OPTIONS
+    </div>
+    <div class="modal-subtitle">
+        A MOD FOR BLACK OPS 3
+    </div>
+    <div class="modal-img-large">
+        <a href="../projects/img/tfzoptions/main.jpg" data-lightbox="image-1">
+            <img src="../projects/img/tfzoptions/main.jpg" alt="" srcset="">
+        </a>
+    </div>
+    <div class="modal-flex">
+        <div class="modal-text align-right">
+          <div class="modal-section-title">THE MOD</div>
+          This is a mod for Call of Duty: Black Ops 3 which lets you pick and set different options before each zombies game.
+          This mod came about as a need to be able to control certain aspects of the game, similar to how future sequels have allowed, in a way that felt like it was part of the base game.
+          Most similar mods up to this point used a menu that appeared once a game was started, and had to use detection of game events, such as meleeing or firing, to control navigation. This was due to a limitation in the mod tools.
+          The mod can be found <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2235166237" target="_blank">here</a> or through the steam workshop.
+          This mod was one of the first mods to edit the main menu of the game, allowing for a more immersive and fitting experience. 
+          
+        </div>
+        <div class="modal-subimage">
+            <a href="../projects/img/tfzoptions/options.png" data-lightbox="image-2">
+                <img src="../projects/img/tfzoptions/options.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="modal-subimage">
+            <a href="../projects/img/tfzoptions/options-zoomed.png" data-lightbox="image-3">
+                <img src="../projects/img/tfzoptions/options-zoomed.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="modal-text align-left">
+            <div class="modal-section-title">HOW ITS MADE</div>
+            The game side of the mod was made using the official Black Ops 3 mod tools. By default, the tools do no include any way to save any data through game restarts.
+            To combat this, a member of the community, known as Jarik, made a tool that uses the game's ability to save attachments as a way of saving numbers from 0-255 
+            in 700+ different slots. By using 2 slots to save each number, and a bit of tweaking to the script, it was possible to save values up to around 65,000. 
+            I used this to allow the mod to save your chosen options through game restarts and also to get the menu to actually work once the game was started. 
+            Black Ops (and probably other Call of Duty games) uses a form of LUA for its menu systems, known as LUI. The mod tools don't officially support using custom LUI code, and the
+             doesn't contain any decompiled lua files in the tools either. This makes the whole process of using them in a mod a lot more confusing, and because so, 
+             requires a few more tools. 
+        </div>
+        <div class="modal-text flex-fullwidth">
+          <div class="modal-section-title">DECOMPILING THE LUI</div>
+          Firstly, to allow the mod tools to compile files with LUI in, I needed to use a <a href="https://wiki.modme.co/wiki/black_ops_3/Lua-(LUI).html" target="_blank">mod called L3akMod</a>. This allows the 
+          tools to read and compile LUI files, so the game can use them as overrides. The way the game handles mod files, if a copy of a file exists in your mod and in game, it uses and runs the file 
+          from the mod. Because of this, you are required to extract the LUI files from the game itself. Using a <a href="https://github.com/Scobalula/Greyhound" target="_blank">Call of Duty asset extraction tool made by Scobalula called "Greyhound"</a>, it is 
+          possible to extract the compiled LUI files from the game and then use a decompiler made by another user in the community to enable them to be read/edited. Obviously, the decompiled scripts are missing 99% of the function and variable 
+          names, so it took a lot of effort to reverse engineer what each script was used for. Another issue with using LUI in mods is that when there is an error, the game gives you no information about where or what the error is, apart from just crashing. This makes it 
+          a lot harder to debug, so writing small amounts of code incrementally is beneficial. <br>
+          Using all of this, I was able to repurpose the menu files for the start menu, and reworked all the toggle/slider/dropdown classes to make them use my variable saving functions as opposed to the game.
+          The final result is a menu that feels as if it is part of the base game. 
+        </div>
+        <div class="modal-subimage flex-fullwidth video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ku6ICYMBt3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <a href="https://via.placeholder.com/1000x943" data-lightbox="image-4">
+                <img src="https://via.placeholder.com/1000x943" alt="" srcset="">
+            </a> -->
+        </div>
+        <div class="modal-text flex-fullwidth">
+          <div class="modal-section-title">CREDITS</div>
+          Zombie Counter <a href="https://wiki.modme.co/wiki/black_ops_3/basics/Zombie-Counter.html" target="_blank">https://wiki.modme.co/wiki/black_ops_3/basics/Zombie-Counter.html</a><br>
+          lilrifa's hud injector <a href="https://forum.modme.co/threads/lua-hud-injector.2979/" target="_blank">https://forum.modme.co/threads/lua-hud-injector.2979/</a><br>
+          Markgasus' Roamer mod for the idea <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2211637974" target="_blank">https://steamcommunity.com/sharedfiles/filedetails/?id=2211637974</a><br>
+          Jariks SaveData tool, to allow saving of the options.<br>
+          Jarik, MikeyRay, warpspider all for helping me out and putting up with constant questions when developing.<br>
+          Vertasea and their hitmarker scripts <a href="https://forum.modme.co/threads/v7-bo3-hit-markers.3152/" target="_blank">https://forum.modme.co/threads/v7-bo3-hit-markers.3152/</a><br>
+          natesmithzombies and their custom powerups <a href="https://forum.modme.co/threads/custom-powerup-zombie-money.707/" target="_blank">https://forum.modme.co/threads/custom-powerup-zombie-money.707/</a><br>
+          Collie - Getting custom sounds to work in a mod. <a href="https://forum.modme.co/threads/getting-sounds-to-work-for-weapon-mod.1766/" target="_blank">https://forum.modme.co/threads/getting-sounds-to-work-for-weapon-mod.1766/</a><br>
+          ZoekMeMaar for his Packapunch powerup <a href="https://forum.modme.co/threads/custom-powerup-free-pack-a-punch-v1-0-0.846/" target="_blank">https://forum.modme.co/threads/custom-powerup-free-pack-a-punch-v1-0-0.846/</a>
+          </div>
+    </div>
+    
 
+    <script src="./lightbox/js/lightbox.js"></script>
 </div>

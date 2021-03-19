@@ -6,7 +6,7 @@ function toggleMenu() {
         btn.innerHTML = "MENU";
         anime({
             targets:'#nav-mobile-menu',
-            height:[0,500],
+            height:[0,400],
             direction:'reverse',
             easing:'easeInOutQuint',
             duration:500,
@@ -20,7 +20,7 @@ function toggleMenu() {
         btn.innerHTML = "CLOSE";
         anime({
             targets:'#nav-mobile-menu',
-            height:[0,500],
+            height:[0,400],
             duration:500,
             easing:'easeInOutQuint',
         });
